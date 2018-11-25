@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 
+import HomepageLogo from "./components/HomepageLogo/HomepageLogo";
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        { React.version }
-      </div>
+      <body className="App">
+        <HomepageLogo />
+      </body>
     );
   }
 }
