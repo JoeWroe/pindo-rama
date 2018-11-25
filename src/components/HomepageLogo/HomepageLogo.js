@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './HomepageLogo.scss'
 
 import homepageLogo from '../../content/homepageLogo.png'
 
