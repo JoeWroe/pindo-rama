@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import homepageLogo from '../../content/homepageLogo.png'
+
 class HomepageLogo extends Component {
     state = {
         loaded: true
@@ -7,10 +9,10 @@ class HomepageLogo extends Component {
 
     render() {
         return (
-            <div className="HomepageLogo">
-                Pindo Rama
+            <div className='homepageLogo'>
+                <img src={homepageLogo} alt='Pindo Rama' />
             </div>
-        );
+        )
     }
 }
 
