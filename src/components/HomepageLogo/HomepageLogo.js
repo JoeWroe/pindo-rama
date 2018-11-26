@@ -4,9 +4,6 @@ import './HomepageLogo.scss'
 import homepageLogo from '../../content/homepageLogo.png'
 
 class HomepageLogo extends Component {
-    state = {
-        loaded: true
-    }
 
     render() {
         return (
