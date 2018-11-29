@@ -11,6 +11,7 @@ class HomepageContent extends Component {
                 <p>e/ou “Terra das Palmeiras”. </p>
                 <p>Assim era como os povos indígenas </p>
                 <p>chamavam o Brasil antesdo descobrimento. </p>
+                <br />
                 <p>Assim é como nós chamamos a marca onde </p>
                 <p>queremos trazer um pouco da memória brasileira </p>
                 <p>para aqueles que vivem longe de casa. </p>
