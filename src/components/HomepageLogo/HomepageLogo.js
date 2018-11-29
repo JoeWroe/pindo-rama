@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './HomepageLogo.scss'
 
-import homepageLogo from '../../content/homepage-logo-390px-wide.png'
+import homepageLogo from '../../content/homepageLogos/homepage-logo-390px-wide.png'
 
 class HomepageLogo extends Component {
 
