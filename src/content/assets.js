@@ -1,7 +1,15 @@
 const socialMediaAssets = {
-    etsyIcon: require('./socialMediaLogos/etsy.png'),
-    facebookIcon: require('./socialMediaLogos/facebook.png'),
-    instagramIcon: require('./socialMediaLogos/instagram.png')
+    etsyIcon: require('./socialMediaIcons/etsy.png'),
+    facebookIcon: require('./socialMediaIcons/facebook.png'),
+    instagramIcon: require('./socialMediaIcons/instagram.png')
 }
 
-export { socialMediaAssets }
+const languageChangeAssets = {
+    brazilianIcon: require('./languageIcons/brazilian.png'),
+    englishIcon: require('./languageIcons/english.png')
+}
+
+export {
+    socialMediaAssets,
+    languageChangeAssets
+}
