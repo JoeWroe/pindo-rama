@@ -14,10 +14,10 @@ describe('The Social Media Buttons Component', () => {
         const socialMediaButtonsComponent = render(<SocialMediaButtons />)
         const socialMediaButtonsCompiledHtml = socialMediaButtonsComponent.html()
         console.log(socialMediaButtonsCompiledHtml)
-        expect(socialMediaButtonsCompiledHtml).toEqual(
-            "<img src=\"etsy.png\" alt=\"Etsy\">" +
-            "<img src=\"facebook.png\" alt=\"Facebook\">" +
-            "<img src=\"instagram.png\" alt=\"Instagram\">"
+        expect(socialMediaButtonsCompiledHtml).toContain(
+            '<img class="socialMediaImage" src="facebook.png" alt="Facebook">' +
+            '<img class="socialMediaImage" src="instagram.png" alt="Instagram">' +
+            '<img class="socialMediaImage" src="etsy.png" alt="Etsy">'
         )
     })
 })

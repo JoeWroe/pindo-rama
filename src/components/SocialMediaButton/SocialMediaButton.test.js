@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from "enzyme";
+import { shallow } from "enzyme";
 
 import SocialMediaButton from './SocialMediaButton'
 
@@ -9,8 +9,9 @@ describe('The Social Media Button Component', () => {
         expect(socialMediaButtonComponent.exists()).toEqual(true)
     })
 
-    it('renders with an image', () => {
+    it('renders with a social media image', () => {
         const socialMediaButtonComponent = shallow(<SocialMediaButton />)
-        expect(socialMediaButtonComponent.contains(<img />)).toEqual(true)
+        const socialMediaButtonHtml = socialMediaButtonComponent.html()
+        expect(socialMediaButtonHtml).toContain('<img class="socialMediaImage"/>')
     })
 })

@@ -6,15 +6,16 @@ class SocialMediaButton extends Component {
 
     redirectLink = this.props.redirectLink
 
-    redirectTo = (event) => {
+    redirect = (event) => {
         window.location.href = this.redirectLink
     }
 
     render() {
         return (
-            <img src={ socialMediaAssets[this.props.pathToIcon] }
+            <img className='socialMediaImage'
+                 src={ socialMediaAssets[this.props.pathToIcon] }
                  alt={ this.props.altText }
-                 onClick={ this.redirectTo } />
+                 onClick={ this.redirect } />
         )
     }
 }
