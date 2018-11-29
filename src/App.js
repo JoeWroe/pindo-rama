@@ -12,7 +12,7 @@ class App extends Component {
         <HomepageLogo />
         <HomepageTitle />
         <HomepageContent />
-        <SocialMediaButtons/>
+        <SocialMediaButtons />
       </div>
     );
   }
