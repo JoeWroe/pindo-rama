@@ -1,22 +1,39 @@
 import React, {Component} from 'react';
-import './SocialMediaButtons.scss'
+import './HomepageButtons.scss'
 
 import SocialMediaButton from "../SocialMediaButton/SocialMediaButton";
 import LanguageChangeButton from "../LanguageChangeButton/LanguageChangeButton";
 
 
 
-class SocialMediaButtons extends Component {
+class HomepageButtons extends Component {
+    state = {
+        language: "english"
+    }
+
+    setToBrazilian = (e) => {
+        e.preventDefault()
+        this.setState({
+            language: "brazilian"
+        })
+    }
+
+    setToEnglish = (e) => {
+        e.preventDefault()
+        this.setState({
+            language: "english"
+        })
+    }
 
     render() {
         return (
             <div className='socialMediaButtons'>
                 <LanguageChangeButton pathToIcon={'brazilianIcon'}
                                       altText='Brazilian'
-                                      language='Brazilian' />
+                                      languageHandler={ this.setToBrazilian } />
                 <LanguageChangeButton pathToIcon={'englishIcon'}
                                       altText='English'
-                                      language='English' />
+                                      languageHandler={ this.setToEnglish } />
                 <span className='iconDivide' />
                 <SocialMediaButton pathToIcon={'facebookIcon'}
                                    altText='Facebook'
@@ -32,4 +49,4 @@ class SocialMediaButtons extends Component {
     }
 }
 
-export default SocialMediaButtons;
+export default HomepageButtons;

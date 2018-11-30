@@ -1,17 +1,17 @@
 import React from 'react';
 import {shallow, render} from "enzyme";
 
-import SocialMediaButtons from './SocialMediaButtons'
+import HomepageButtons from './HomepageButtons'
 
 
 describe('The Social Media Buttons Component', () => {
     it('renders OK', () => {
-        const socialMediaButtonsComponent = shallow(<SocialMediaButtons />)
+        const socialMediaButtonsComponent = shallow(<HomepageButtons />)
         expect(socialMediaButtonsComponent.exists()).toEqual(true)
     })
 
     it('should contain three images for the social media sites', () => {
-        const socialMediaButtonsComponent = render(<SocialMediaButtons />)
+        const socialMediaButtonsComponent = render(<HomepageButtons />)
         const socialMediaButtonsCompiledHtml = socialMediaButtonsComponent.html()
         console.log(socialMediaButtonsCompiledHtml)
         expect(socialMediaButtonsCompiledHtml).toContain(
