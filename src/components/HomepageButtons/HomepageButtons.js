@@ -4,26 +4,16 @@ import './HomepageButtons.scss'
 import SocialMediaButton from "../SocialMediaButton/SocialMediaButton";
 import LanguageChangeButton from "../LanguageChangeButton/LanguageChangeButton";
 
-
-
 class HomepageButtons extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { language: this.props.language };
+    state = {
+        language: 'english'
     }
 
-    setToBrazilian = (e) => {
-        e.preventDefault()
+    changeLanguage = (language) => {
         this.setState({
-            language: "brazilian"
+            language: language
         })
-    }
-
-    setToEnglish = (e) => {
-        e.preventDefault()
-        this.setState({
-            language: "english"
-        })
+        this.props.setLanguage(this.state.language)
     }
 
     render() {
@@ -31,20 +21,20 @@ class HomepageButtons extends Component {
             <div className='socialMediaButtons'>
                 <LanguageChangeButton pathToIcon={'brazilianIcon'}
                                       altText='Brazilian'
-                                      languageHandler={ this.setToBrazilian } />
+                                      languageHandler={() => {this.changeLanguage('brazilian')}}/>
                 <LanguageChangeButton pathToIcon={'englishIcon'}
                                       altText='English'
-                                      languageHandler={ this.setToEnglish } />
-                <span className='iconDivide' />
+                                      languageHandler={() => {this.changeLanguage('english')}}/>
+                <span className='iconDivide'/>
                 <SocialMediaButton pathToIcon={'facebookIcon'}
                                    altText='Facebook'
-                                   redirectLink='https://www.facebook.com/pindoramaofficial/' />
+                                   redirectLink='https://www.facebook.com/pindoramaofficial/'/>
                 <SocialMediaButton pathToIcon={'instagramIcon'}
                                    altText='Instagram'
-                                   redirectLink='https://www.instagram.com/pindo.rama/' />
+                                   redirectLink='https://www.instagram.com/pindo.rama/'/>
                 <SocialMediaButton pathToIcon={'etsyIcon'}
                                    altText='Etsy'
-                                   redirectLink='https://www.etsy.com/uk/shop/Pindoramashop' />
+                                   redirectLink='https://www.etsy.com/uk/shop/Pindoramashop'/>
             </div>
         )
     }

@@ -1,12 +1,12 @@
 import React from 'react';
 import './HomepageTitle.scss'
 
-const HomepageTitle = () => {
+const EnglishHomepageTitle = () => {
     return (
         <div className='homepageTitle'>
-            <h1>CELEBRANDO O BRASIL & SUAS BELEZAS</h1>
+            <h1>CELEBRATING BRAZIL & ITS BEAUTY</h1>
         </div>
     )
 }
 
-export default HomepageTitle;
+export default EnglishHomepageTitle;
