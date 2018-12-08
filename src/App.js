@@ -7,9 +7,8 @@ import EnglishHomepageContent from "./components/HomepageContent/HomepageContent
 import HomepageButtons from "./components/HomepageButtons/HomepageButtons";
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { language: this.props.language || 'brazilian' };
+    state = {
+        language: 'brazilian'
     }
 
     render() {
