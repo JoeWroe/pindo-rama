@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './HomepageContent.scss'
 
-class HomepageContent extends Component {
+class BrazilianHomepageContent extends Component {
 
     render() {
         return (
@@ -20,4 +20,4 @@ class HomepageContent extends Component {
     }
 }
 
-export default HomepageContent;
+export default BrazilianHomepageContent;

@@ -7,8 +7,9 @@ import LanguageChangeButton from "../LanguageChangeButton/LanguageChangeButton";
 
 
 class HomepageButtons extends Component {
-    state = {
-        language: "english"
+    constructor(props) {
+        super(props);
+        this.state = { language: this.props.language };
     }
 
     setToBrazilian = (e) => {

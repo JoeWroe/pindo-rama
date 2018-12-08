@@ -1,17 +1,17 @@
 import React from 'react';
 import {render, shallow} from "enzyme";
 
-import HomepageContent from './HomepageContent.js'
+import BrazilianHomepageContent from './HomepageContent.brazilian.js'
 
 
 describe('The Homepage Content Component', () => {
     it('renders OK', () => {
-        const homepageContentComponent = shallow(<HomepageContent />)
+        const homepageContentComponent = shallow(<BrazilianHomepageContent />)
         expect(homepageContentComponent.exists()).toEqual(true)
     })
 
     it('displays the brand description', () => {
-        const homepageContentComponent = render(<HomepageContent />)
+        const homepageContentComponent = render(<BrazilianHomepageContent />)
         const hompageContentText = homepageContentComponent.text()
         expect(hompageContentText).toEqual(
             'Pindorama, palavra derivada do Tupi Guarani, ' +
