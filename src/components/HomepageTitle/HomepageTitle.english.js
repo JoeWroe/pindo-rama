@@ -4,7 +4,7 @@ import './HomepageTitle.scss'
 const EnglishHomepageTitle = () => {
     return (
         <div className='homepageTitle'>
-            <h1>CELEBRATING BRAZIL & ITS BEAUTY</h1>
+            <h1>CELEBRATING BRAZIL & IT'S BEAUTY</h1>
         </div>
     )
 }
