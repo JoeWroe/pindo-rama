@@ -6,14 +6,14 @@ import LanguageChangeButton from "../LanguageChangeButton/LanguageChangeButton";
 
 class HomepageButtons extends Component {
     state = {
-        language: 'english'
+        language: ''
     }
 
     changeLanguage = (language) => {
         this.setState({
             language: language
-        })
-        this.props.setLanguage(this.state.language)
+        },
+            () => this.props.setLanguage(this.state.language))
     }
 
     render() {
@@ -21,10 +21,10 @@ class HomepageButtons extends Component {
             <div className='socialMediaButtons'>
                 <LanguageChangeButton pathToIcon={'brazilianIcon'}
                                       altText='Brazilian'
-                                      languageHandler={() => {this.changeLanguage('brazilian')}}/>
+                                      switchLanguage={() => {this.changeLanguage('brazilian')}}/>
                 <LanguageChangeButton pathToIcon={'englishIcon'}
                                       altText='English'
-                                      languageHandler={() => {this.changeLanguage('english')}}/>
+                                      switchLanguage={() => {this.changeLanguage('english')}}/>
                 <span className='iconDivide'/>
                 <SocialMediaButton pathToIcon={'facebookIcon'}
                                    altText='Facebook'

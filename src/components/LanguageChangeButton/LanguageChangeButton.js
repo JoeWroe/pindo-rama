@@ -7,7 +7,7 @@ class LanguageChangeButton extends Component {
             <img className='languageChangeImage'
                  src={ languageChangeAssets[this.props.pathToIcon] }
                  alt={ this.props.altText }
-                 onClick={ this.props.languageHandler } />
+                 onClick={ this.props.switchLanguage } />
         )
     }
 }
