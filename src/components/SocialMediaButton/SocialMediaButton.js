@@ -1,23 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 import './SocialMediaButton.scss'
-import { socialMediaAssets } from '../../content/assets'
+import {socialMediaAssets} from '../../content/assets'
 
-class SocialMediaButton extends Component {
+const SocialMediaButton = (props) => {
+    const {altText, pathToIcon, redirectLink} = props
 
-    redirectLink = this.props.redirectLink
+    const redirect = () => {window.location.href = redirectLink}
 
-    redirect = (event) => {
-        window.location.href = this.redirectLink
-    }
-
-    render() {
         return (
             <img className='socialMediaImage'
-                 src={ socialMediaAssets[this.props.pathToIcon] }
-                 alt={ this.props.altText }
-                 onClick={ this.redirect } />
+                 src={socialMediaAssets[pathToIcon]}
+                 alt={altText}
+                 onClick={redirect}/>
         )
-    }
 }
 
 export default SocialMediaButton;
