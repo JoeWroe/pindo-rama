@@ -6,4 +6,10 @@
   line-height: 0.8;
   margin-bottom: 25px;
   text-align: center;
+
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
 }
