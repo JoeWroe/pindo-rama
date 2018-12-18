@@ -19,7 +19,7 @@ class Homepage extends Component {
 
     render() {
         return (
-            <CSSTransition in={true} appear={true} timeout={1500} classNames='fade'>
+            <CSSTransition in={true} appear={true} timeout={1000} classNames='fade'>
                 <div className="homepage">
                     <HomepageLogo/>
                     <HomepageText language={this.state.language}/>
