@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {CSSTransition, TransitionGroup} from 'react-transition-group'
+import {CSSTransition} from 'react-transition-group'
 
 import languages from '../../data/languages'
 import './Homepage.scss'
@@ -22,11 +22,7 @@ class Homepage extends Component {
             <CSSTransition in={true} appear={true} timeout={1500} classNames='fade'>
                 <div className="homepage">
                     <HomepageLogo/>
-                    <TransitionGroup className='homepage-content-container'>
-                        <CSSTransition key={this.state.language.key} timeout={500} classNames='fade'>
-                            <HomepageText language={this.state.language}/>
-                        </CSSTransition>
-                    </TransitionGroup>
+                    <HomepageText language={this.state.language}/>
                     <HomepageButtons setLanguage={this.setLanguage}/>
                 </div>
             </CSSTransition>
