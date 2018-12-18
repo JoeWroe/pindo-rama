@@ -1,6 +1,6 @@
 const languages = {
     brazilian: {
-        key: 'BRA',
+        id: 'BRA',
         name: 'brazilian',
         header: 'CELEBRANDO O BRASIL & SUAS BELEZAS',
         content: [
@@ -16,7 +16,7 @@ const languages = {
         ]
     },
     english: {
-        key: 'ENG',
+        id: 'ENG',
         name: 'english',
         header: 'CELEBRATING BRAZIL & IT\'S BEAUTY',
         content: [
