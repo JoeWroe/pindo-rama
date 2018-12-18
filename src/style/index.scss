@@ -1,18 +1,19 @@
 html {
-  min-height: 100%;
+  max-height: 100vh;
+  min-height: 100vh;
 }
 
 body {
   background: linear-gradient(180deg, #263625 21%, #037058 79%);
   margin: 0;
-  max-height: 100%;
-  min-height: 100%;
+  max-height: 100vh;
+  min-height: 100vh;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .App {
-  max-height: 100%;
+  max-height: 100vh;
 }
 
