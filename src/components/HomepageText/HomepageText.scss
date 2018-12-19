@@ -2,3 +2,27 @@
   position: absolute;
   width: 100vw;
 }
+
+.homepageTitle {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.homepageTitle h1 {
+  color: #f9f5d2;
+  font-family: "Bodoni 72", "Courier", "serif";
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.homepageContent {
+  color: #f9f5d2;
+  font-family: "Courier", "serif";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 0.8;
+  margin-bottom: 25px;
+  text-align: center;
+}

@@ -3,9 +3,6 @@ import {CSSTransition, TransitionGroup} from 'react-transition-group'
 
 import './HomepageText.scss'
 
-import '../HomepageTitle/HomepageTitle.scss'
-import '../HomepageContent/HomepageContent.scss'
-
 const HomepageText = ({language}) => {
     return (
         <TransitionGroup className='homepage-content-container'>
