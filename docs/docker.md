@@ -1,4 +1,4 @@
-## Docker
+## :whale: Docker
 
 ### :tractor: Building the app
 
