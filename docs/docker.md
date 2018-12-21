@@ -1,6 +1,6 @@
 ## :whale: Docker
 
-### :tractor: Building the app
+### :package: Building the app
 
 From the top level of the app run:
 
@@ -26,3 +26,31 @@ docker run -p 4000:80 pindo-rama
 ```
 
 this example maps your machines port 4000 to the pindo-rama containers port 80.
+
+### :ticket: Tag the latest build
+
+First check the most recent build version on the [docker repositories tags page](https://hub.docker.com/r/joewroe/pindo-rama/tags).
+
+Next tag the recently built image by incrementing the most recent tag in the repository:
+
+```bash
+$ docker tag {image-name} joewroe/pindo-rama:{new-tag}
+```
+
+### :hand: Push the image to the repository
+
+First check your available images:
+
+```bash
+$ docker image ls
+
+REPOSITORY              TAG         IMAGE ID
+joewroe/pindo-rama      v1.0        326387cea398
+pindo-rama              latest      326387cea398
+```
+
+Upload your tagged image to the repo:
+
+```bash
+$ docker push joewroe/pindo-rama:v1.0
+```
