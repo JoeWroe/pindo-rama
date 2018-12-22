@@ -24,7 +24,7 @@ pindo-rama      latest      326387cea398
 next run the app with your desired image at a port of your choice:
 
 ```bash
-docker run -p 4000:80 pindo-rama
+$ docker run -p 4000:80 pindo-rama
 ```
 
 this example maps your machines port 4000 to the pindo-rama containers port 80.
@@ -39,7 +39,7 @@ This will require completion of the following steps:
 Then you can run:
 
 ```bash
-docker run -p 4000:80 joewroe/pindo-rama:v1.0
+$ docker run -p 4000:80 joewroe/pindo-rama:v1.0
 ```
 
 This will run the `v1.0` tagged image from the docker repository on port 4000 of your machine. Docker will pull the image for you if it does not find it on your machine.
@@ -71,3 +71,17 @@ Upload your tagged image to the repo:
 ```bash
 $ docker push joewroe/pindo-rama:v1.0
 ```
+
+---
+
+### :movie_camera: Docker in production
+
+### :dancers: Load balancing across multiple running containers
+
+For a little gold plating, a docker compose file has been included which will allow you to run the same image in multiple containers. This allows for some load balancing of the app within a single host. To run a load balanced app, simple run:
+
+```bash
+$ docker stack deploy -c docker-compose.yml pindo-rama
+```
+
+**N.B** This will only work if you've initialized a docker swarm on your host with `docker swarm init`.
