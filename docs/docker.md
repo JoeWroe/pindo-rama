@@ -74,7 +74,7 @@ $ docker push joewroe/pindo-rama:v1.0
 
 ---
 
-### :movie_camera: Docker in production
+## :movie_camera: Docker in production
 
 ### :dancers: Load balancing across multiple running containers
 
