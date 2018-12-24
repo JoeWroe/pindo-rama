@@ -6,3 +6,4 @@ Celebrating Brazil and it's Beauty.
 
 - [Create React App](./docs/create-react-app-readme.md)
 - [Docker](./docs/docker.md)
+- [Infrastructure](./docs/infrastructure.md)
