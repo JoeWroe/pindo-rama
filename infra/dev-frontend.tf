@@ -1,9 +1,23 @@
+resource "digitalocean_ssh_key" "pindo-rama" {
+  name = "pindo-rama"
+  public_key = "${file(var.public_key)}"
+}
+
 resource "digitalocean_droplet" "dev-frontend" {
-  image = "ubuntu-18-04-x64"
-  name = "dev-frontend"
+  image = "docker"
+  name = "pindo-rama"
   region = "lon1"
   size = "512mb"
-  user_data = "docker run -p 4000:80 joewroe/pindo-rama:v1.0"
+  ssh_keys = ["${digitalocean_ssh_key.pindo-rama.fingerprint}"]
+  connection {
+    user = "root"
+    private_key = "${file(var.private_key)}"
+  }
+  provisioner "remote-exec" {
+    inline = [
+      "docker run -p 4000:80 joewroe/pindo-rama:v1.0"
+    ]
+  }
 }
 
 resource "digitalocean_domain" "pindo-rama" {
