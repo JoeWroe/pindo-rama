@@ -24,3 +24,11 @@ resource "digitalocean_domain" "pindo-rama" {
   ip_address = "${digitalocean_droplet.dev-frontend.ipv4_address}"
   name = "pindo-rama.art"
 }
+
+resource "digitalocean_record" "pindo-rama" {
+  domain = "${digitalocean_domain.pindo-rama.name}"
+  type = "A"
+  name = "www"
+  value = "${digitalocean_droplet.dev-frontend.ipv4_address}"
+  port = "4000"
+}
