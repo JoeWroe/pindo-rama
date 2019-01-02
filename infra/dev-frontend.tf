@@ -15,20 +15,12 @@ resource "digitalocean_droplet" "dev-frontend" {
   }
   provisioner "remote-exec" {
     inline = [
-      "docker run -d -p 4000:80 joewroe/pindo-rama:v1.0"
+      "docker run -d -p 80:80 joewroe/pindo-rama:v1.0"
     ]
   }
 }
 
-resource "digitalocean_domain" "pindo-rama" {
+resource "digitalocean_domain" "pindo-rama-dev" {
   ip_address = "${digitalocean_droplet.dev-frontend.ipv4_address}"
-  name = "pindo-rama.art"
-}
-
-resource "digitalocean_record" "pindo-rama" {
-  domain = "${digitalocean_domain.pindo-rama.name}"
-  type = "A"
-  name = "www"
-  value = "${digitalocean_droplet.dev-frontend.ipv4_address}"
-  port = "4000"
+  name = "dev.pindo-rama.art"
 }
