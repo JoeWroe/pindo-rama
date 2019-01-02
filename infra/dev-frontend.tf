@@ -15,7 +15,7 @@ resource "digitalocean_droplet" "dev-frontend" {
   }
   provisioner "remote-exec" {
     inline = [
-      "docker run -d -p 80:80 joewroe/pindo-rama:v1.0"
+      "docker run -d -p 80:80 joewroe/pindo-rama:v1.1"
     ]
   }
 }
