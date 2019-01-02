@@ -1,6 +1,7 @@
 .homepageButtons {
-  position: absolute;
   bottom: 0;
+  height: 3em;
+  position: absolute;
   width: 100%;
 }
 
@@ -11,6 +12,6 @@
 .iconDivide {
   border-bottom: 26px solid #f9f5d2;
   border-left: 2px solid #f9f5d2;
-  margin: 0 7px 0 7px;
+  margin: 0 7px 0;
   vertical-align: top;
 }

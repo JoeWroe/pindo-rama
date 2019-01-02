@@ -1,4 +1,6 @@
 .homepageText {
+  max-height: calc(100% - 24.5em);
+  overflow-y: scroll;
   position: absolute;
   width: 100vw;
 }
@@ -15,6 +17,7 @@
   font-weight: 800;
   line-height: 1.1;
   text-align: center;
+  max-width: 99vw;
 }
 
 .homepageContent {
@@ -23,6 +26,6 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 0.8;
-  margin-bottom: 25px;
+  overflow: hidden;
   text-align: center;
 }
